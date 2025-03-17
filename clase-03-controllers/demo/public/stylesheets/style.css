@@ -1,0 +1,15 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: rgb(238 238 238);
+}
+
+a {
+  color: #00B7FF;
+}
+
+header, footer{
+  height: 20vh;
+  background-color: rgb(110, 110, 110);
+  padding: 10px;
+}
