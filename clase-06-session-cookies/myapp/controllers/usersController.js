@@ -5,7 +5,13 @@ let bcryptjs = require("bcryptjs");
 
 let usersController = {
     show: function(req, res) {
-        return res.render("register");
+
+        if (req.session.user != undefined) {
+            return res.redirect("/")
+        } else {
+            return res.render("register");
+        }
+
     },
     create: function(req, res){
         // recuperar los datos del form
@@ -30,7 +36,11 @@ let usersController = {
         
     },
     showLogin: function(req, res) {
-        return res.render("login");
+         if (req.session.user != undefined) {
+            return res.redirect("/")
+        } else {
+            return res.render("login");
+        }
     },
     createLogin: function(req, res){
         // recuperar los datos del form
